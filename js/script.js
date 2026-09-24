@@ -192,3 +192,29 @@ document
         });
 
     });
+
+/* =====================================================
+   SLIDER - MINHA TRAJETÓRIA
+===================================================== */
+
+const trajectorySlides = document.querySelectorAll('.trajectory-slide');
+
+let trajectoryIndex = 0;
+
+if (trajectorySlides.length > 1) {
+
+    setInterval(() => {
+
+        trajectorySlides[trajectoryIndex].classList.remove('active');
+
+        trajectoryIndex++;
+
+        if (trajectoryIndex >= trajectorySlides.length) {
+            trajectoryIndex = 0;
+        }
+
+        trajectorySlides[trajectoryIndex].classList.add('active');
+
+    }, 5000);
+
+}
