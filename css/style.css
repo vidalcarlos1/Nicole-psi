@@ -1256,6 +1256,154 @@ blockquote {
 
 
 /* =====================================================
+   FAQ
+===================================================== */
+
+.faq {
+
+    background: #f1efe9;
+
+}
+
+.faq-container {
+
+    display: grid;
+
+    grid-template-columns: .8fr 1.2fr;
+
+    gap: 90px;
+
+    align-items: start;
+
+}
+
+.faq-heading h2 {
+
+    font-family: 'Cormorant Garamond', serif;
+
+    color: var(--green-dark);
+
+    font-size: clamp(42px, 5vw, 64px);
+
+    font-weight: 500;
+
+    line-height: 1.05;
+
+    margin: 18px 0 25px;
+
+}
+
+.faq-heading p {
+
+    color: #747b76;
+
+    font-size: 14px;
+
+    max-width: 330px;
+
+}
+
+.faq-list {
+
+    border-top: 1px solid #d8d5cd;
+
+}
+
+.faq-item {
+
+    border-bottom: 1px solid #d8d5cd;
+
+}
+
+.faq-item summary {
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 25px;
+
+    padding: 23px 0;
+
+    color: var(--green-dark);
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 25px;
+
+    line-height: 1.2;
+
+    cursor: pointer;
+
+    list-style: none;
+
+}
+
+.faq-item summary::-webkit-details-marker {
+
+    display: none;
+
+}
+
+.faq-item summary:focus-visible {
+
+    outline: 2px solid var(--green);
+
+    outline-offset: 5px;
+
+}
+
+.faq-icon,
+.faq-icon::after {
+
+    display: block;
+
+    width: 15px;
+
+    height: 1px;
+
+    background: var(--green);
+
+    flex-shrink: 0;
+
+    transition: transform .3s;
+
+}
+
+.faq-icon::after {
+
+    content: '';
+
+    transform: rotate(90deg);
+
+}
+
+.faq-item[open] .faq-icon::after {
+
+    transform: rotate(0);
+
+}
+
+.faq-item p {
+
+    max-width: 600px;
+
+    padding: 0 45px 24px 0;
+
+    color: #737a75;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+
+}
+
+
+/* =====================================================
    CTA
 ===================================================== */
 
@@ -1607,7 +1755,8 @@ blockquote {
 
     .about-grid,
     .location-grid,
-    .cta-container {
+    .cta-container,
+    .faq-container {
 
         grid-template-columns: 1fr;
 
@@ -1656,6 +1805,14 @@ blockquote {
         margin-right: auto;
     }
 
+    .faq-heading {
+        text-align: center;
+    }
+
+    .faq-heading p {
+        margin: auto;
+    }
+
     .footer-grid {
         grid-template-columns: 1fr 1fr;
     }
@@ -1701,6 +1858,10 @@ blockquote {
     .instagram-header {
         flex-direction: column;
         align-items: flex-start;
+    }
+
+    .faq-item summary {
+        font-size: 23px;
     }
 
     .footer-grid {
