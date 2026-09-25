@@ -2,7 +2,7 @@
    CONFIGURAÇÕES
 ===================================================== */
 
-// COLOQUE AQUI O NÚMERO DA NICOLE
+
 // Formato: código do país + DDD + número
 // Exemplo: 5519999999999
 
