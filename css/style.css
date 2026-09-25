@@ -1929,3 +1929,47 @@ blockquote {
     visibility: visible;
     transform: scale(1);
 }
+
+/* =====================================================
+   MINHA TRAJETÓRIA - AJUSTE MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .trajectory .about-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .trajectory .about-content {
+        order: 1;
+    }
+
+    .trajectory .about-image {
+        order: 2;
+        position: relative;
+        width: 100%;
+        height: 450px;
+        min-height: 450px;
+        overflow: hidden;
+    }
+
+    .trajectory-slider .trajectory-slides {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .trajectory-slider .trajectory-slide {
+        position: absolute !important;
+        inset: 0 !important;
+
+        width: 100% !important;
+        height: 100% !important;
+
+        object-fit: cover;
+    }
+
+}
